@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="266.842">
+<testcase classname="users could register with new account" name="user could register with valid data successfully" time="19.119">
+<system-out><![CDATA[Given user goto register page...............................................passed
+When user select gender type................................................passed
+Then user enter first name "automation" and last name "tester"..............passed
+Then user enter date of birth...............................................passed
+Then user enter email "test1@example.com" field.............................passed
+Then user fills Password fields "P@ssw0rd" "P@ssw0rd".......................passed
+Then user clicks on register button.........................................passed
+And applied Soft assertion as required for all scenarios....................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could use login functionality to use their accounts" name="user could login with valid email and password" time="15.326">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with valid  "test1@example.com" and "P@ssw0rd"..............passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could use login functionality to use their accounts" name="user could login with invalid email and password" time="11.91">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with invalid "wrong@example.com" and "P@ssw0rd".............passed
+Then user press on login button.............................................passed
+And user could not login to the system......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Currey Testing" name="User could select euro" time="11.465">
+<system-out><![CDATA[When user select euro.......................................................passed
+Then we will see euro symbol on all products................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for products with different parameters" name="search with product name" time="13.441">
+<system-out><![CDATA[When click on search field..................................................passed
+And search with "book"......................................................passed
+Then user could find "book".................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for products with different parameters" name="search with product name 2" time="11.776">
+<system-out><![CDATA[When click on search field..................................................passed
+And search with "laptop"....................................................passed
+Then user could find "laptop"...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for products with different parameters" name="search with product name 3" time="11.722">
+<system-out><![CDATA[When click on search field..................................................passed
+And search with "nike"......................................................passed
+Then user could find "nike".................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for products with different parameters" name="search with sku" time="13.723">
+<system-out><![CDATA[When click on search field..................................................passed
+And search with SKU and click on product "SCI_FAITH"........................passed
+Then do assertion with SKU "SCI_FAITH"......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for products with different parameters" name="search with sku 2" time="14.354">
+<system-out><![CDATA[When click on search field..................................................passed
+And search with SKU and click on product "APPLE_CAM"........................passed
+Then do assertion with SKU "APPLE_CAM"......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search for products with different parameters" name="search with sku 3" time="13.281">
+<system-out><![CDATA[When click on search field..................................................passed
+And search with SKU and click on product "SF_PRO_11"........................passed
+Then do assertion with SKU "SF_PRO_11"......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="hover on  main categories" name="hover on one of main categories then click on" time="12.809">
+<system-out><![CDATA[When select random one of the three main categories.........................passed
+Then select sub-category and Assert that the sub-category title is (equal or contains) the one you get.passed
+]]></system-out>
+</testcase>
+<testcase classname="Automate two sliders at home page" name="first slider is clickable on home page" time="11.657">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given click on first slider.................................................passed
+When Assertion with URL link first scenario.................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.pomHomeSlider.AssertionWithURLLinkFirstScenario(pomHomeSlider.java:33)
+	at org.example.stepDef.HomeSlider.assertionWithURLLinkFirstScenario(HomeSlider.java:19)
+	at ✽.Assertion with URL link first scenario(file:///C:/Users/CompuCity/IdeaProjects/EcommerceApp/src/main/resources/features/F-HomeSlider.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="Automate two sliders at home page" name="second slider is clickable on home page" time="11.825">
+<failure message="expected [ https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given click on second slider................................................passed
+When Assertion with URL link second scenario................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [ https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.pomHomeSlider.AssertionWithURLLinkSecondScenario(pomHomeSlider.java:38)
+	at org.example.stepDef.HomeSlider.assertionWithURLLinkSecondScenario(HomeSlider.java:34)
+	at ✽.Assertion with URL link second scenario(file:///C:/Users/CompuCity/IdeaProjects/EcommerceApp/src/main/resources/features/F-HomeSlider.feature:12)
+]]></failure>
+</testcase>
+<testcase classname="follow us" name="using facebook tab" time="14.208">
+<system-out><![CDATA[Given click on facebook tab.................................................passed
+When moves between two tabs.................................................passed
+Then Assertion with Url link on facebook tab................................passed
+]]></system-out>
+</testcase>
+<testcase classname="follow us" name="using twitter tab" time="15.078">
+<system-out><![CDATA[Given click on twitter tab..................................................passed
+When moves between two tabs.................................................passed
+Then Assertion with Url link on twitter tab.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="follow us" name="using rss tab" time="13.025">
+<failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[Given click on rss tab......................................................passed
+Then Assertion with Url link on rss tab.....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDef.FollowUs.assertionWithUrlLinkOnRssTab(FollowUs.java:63)
+	at ✽.Assertion with Url link on rss tab(file:///C:/Users/CompuCity/IdeaProjects/EcommerceApp/src/main/resources/features/G-FollowUs.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="follow us" name="using youtube tab" time="17.875">
+<system-out><![CDATA[Given click on youtube tab..................................................passed
+When moves between two tabs.................................................passed
+Then Assertion with Url link on youtube tab.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Adding items to wishlist" name="Click on wishlist button of HTC one M8 android and assert the color of message" time="13.149">
+<system-out><![CDATA[Given Click on wishlist button of HTC one M8 android........................passed
+When asser background color of message is green.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Adding items to wishlist" name="Get Qty value at wishlist" time="20.503">
+<system-out><![CDATA[Given Click on wishlist button of HTC one M8 android........................passed
+When click on main wish list button.........................................passed
+Then get QTY value and verify its bigger than zero..........................passed
+]]></system-out>
+</testcase>
+</testsuite>
